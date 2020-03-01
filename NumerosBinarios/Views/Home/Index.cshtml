@@ -1,0 +1,22 @@
+﻿@model NumBinario
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="row">
+        @using (Html.BeginForm("Index","Home",FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="numero">Introduzca 10 numeros</label> <br />
+                @for (int i = 0; i < 10; i++)
+                {
+
+                 <input class=".w" asp-for="Numeros[i]" required />
+                }
+
+            </div>
+            <input type="submit" class="btn-primary" name="Enviar" /> 
+
+        }
+
+    </div>
